@@ -1,0 +1,4 @@
+.DS_Store
+*.log
+packaging/*.zip
+packaging/*.tar.gz
