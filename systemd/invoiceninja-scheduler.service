@@ -1,2 +1,10 @@
 [Unit]
-Description=Scheduler
+Description=Invoice Ninja Scheduler Runner
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=oneshot
+User=www-data
+WorkingDirectory=/var/www/invoiceninja
+ExecStart=/usr/bin/php artisan schedule:run

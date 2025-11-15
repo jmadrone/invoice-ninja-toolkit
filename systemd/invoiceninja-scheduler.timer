@@ -1,2 +1,9 @@
 [Unit]
-Description=Timer
+Description=Run Invoice Ninja scheduler every minute
+
+[Timer]
+OnCalendar=*-*-* *:*:00
+Persistent=true
+
+[Install]
+WantedBy=timers.target
